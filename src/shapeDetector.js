@@ -8,7 +8,7 @@ const c = canvas.getContext('2d');
 
 const prediction = document.getElementById('prediction');
 
-const worker = new Worker('worker.js');
+const worker = new Worker('src/worker.js');
 worker.onmessage = function(e) {
     prediction.innerText = e.data;
 }
